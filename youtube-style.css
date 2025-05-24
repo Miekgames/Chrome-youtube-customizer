@@ -1,37 +1,80 @@
-/* Hide sidebar and comments */
-#secondary,
+/* === General Reset === */
+body, ytd-app {
+  background-color: #f0f0f0 !important;
+  font-family: "San Francisco", "Helvetica Neue", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Glassy Header === */
+#masthead-container {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* === Floating Navigation Bar === */
+#container.ytd-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* === Rounded Search Bar === */
+#search-form {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+/* === Video Player === */
+#player {
+  margin-top: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* === Sidebar === */
+#guide {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* === Rounded Icons === */
+ytd-topbar-logo-renderer, ytd-masthead #buttons ytd-button-renderer {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* === Comments Section === */
 #comments {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* === Subtle Animations === */
+ytd-button-renderer, ytd-toggle-button-renderer {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ytd-button-renderer:hover, ytd-toggle-button-renderer:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
+}
+
+/* === Hide Unnecessary Elements === */
+ytd-watch-next-secondary-results-renderer,
+ytd-merch-shelf-renderer,
+ytd-compact-promoted-video-renderer {
   display: none !important;
-}
-
-/* Hide header and footer crap */
-#masthead-container,
-ytd-masthead,
-#guide,
-#footer {
-  display: none !important;
-}
-
-/* Expand video player to full width */
-#player, #player-container, #movie_player {
-  max-width: 100% !important;
-  width: 100% !important;
-  height: 80vh !important;
-  margin: 0 auto !important;
-}
-
-/* Center main content */
-#primary {
-  margin: 0 auto !important;
-  width: 90% !important;
-}
-
-/* Remove recommendations */
-ytd-watch-next-secondary-results-renderer {
-  display: none !important;
-}
-
-/* Clean up padding */
-ytd-app {
-  padding: 0 !important;
 }
