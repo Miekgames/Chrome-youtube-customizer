@@ -1,16 +1,37 @@
-/* Example: Change background to black */
-body {
-  background-color: #000 !important;
-  color: #fff !important;
-}
-
-/* Hide sidebar */
-#secondary {
+/* Hide sidebar and comments */
+#secondary,
+#comments {
   display: none !important;
 }
 
-/* Bigger video player */
-#movie_player {
+/* Hide header and footer crap */
+#masthead-container,
+ytd-masthead,
+#guide,
+#footer {
+  display: none !important;
+}
+
+/* Expand video player to full width */
+#player, #player-container, #movie_player {
   max-width: 100% !important;
+  width: 100% !important;
   height: 80vh !important;
+  margin: 0 auto !important;
+}
+
+/* Center main content */
+#primary {
+  margin: 0 auto !important;
+  width: 90% !important;
+}
+
+/* Remove recommendations */
+ytd-watch-next-secondary-results-renderer {
+  display: none !important;
+}
+
+/* Clean up padding */
+ytd-app {
+  padding: 0 !important;
 }
