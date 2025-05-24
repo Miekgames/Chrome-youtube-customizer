@@ -1,0 +1,16 @@
+/* Example: Change background to black */
+body {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Hide sidebar */
+#secondary {
+  display: none !important;
+}
+
+/* Bigger video player */
+#movie_player {
+  max-width: 100% !important;
+  height: 80vh !important;
+}
