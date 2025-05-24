@@ -1,12 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Minimal YouTube",
+  "name": "YouTube iOS 19 Redesign",
   "version": "1.0",
-  "description": "Strips YouTube down to the essentials",
+  "description": "Transforms YouTube's UI to reflect the sleek, glassy aesthetics of iOS 19.",
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/*"],
       "css": ["youtube-style.css"]
     }
-  ]
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
 }
