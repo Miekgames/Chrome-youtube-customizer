@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "My YouTube Customizer",
+  "version": "1.0",
+  "description": "Customizes YouTube's look just for me, Mike",
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["youtube-style.css"],
+      "js": ["youtube-custom.js"]
+    }
+  ],
+  "permissions": []
+}
